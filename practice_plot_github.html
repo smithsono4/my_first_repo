@@ -384,7 +384,7 @@ summary {
 ##  9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
 ## 10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
 ## # … with 53,930 more rows</code></pre>
-<pre class="r"><code>ggplot(diamonds, aes(x=cut, y=price, fill=cut)) +
+<pre class="r"><code>ggplot(diamonds, aes(x=cut, y=price, fill=depth)) +
   geom_bar(stat = &quot;identity&quot;) +
   labs(x = &quot;Cut of Diamond&quot;, y = &quot;Price of Diamond&quot;) +
   theme_grey() -&gt; diamond_cost_and_cut

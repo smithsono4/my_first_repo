@@ -16,7 +16,7 @@ library(tidyverse)
 
 ```{r}
 diamonds
-ggplot(diamonds, aes(x=cut, y=price, fill=cut)) +
+ggplot(diamonds, aes(x=cut, y=price, fill=depth)) +
   geom_bar(stat = "identity") +
   labs(x = "Cut of Diamond", y = "Price of Diamond") +
   theme_grey() -> diamond_cost_and_cut
