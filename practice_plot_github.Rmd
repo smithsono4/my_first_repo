@@ -1,0 +1,35 @@
+---
+title: "Practice Plotting and Github"
+author: "Olivia Smithson"
+date: "3/5/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+```
+
+
+```{r}
+diamonds
+ggplot(diamonds, aes(x=cut, y=price, fill=cut)) +
+  geom_bar(stat = "identity") +
+  labs(x = "Cut of Diamond", y = "Price of Diamond") +
+  theme_grey() -> diamond_cost_and_cut
+
+  ggsave("practice_plot.png", diamond_cost_and_cut)
+  
+
+```
+
+
+
+```{r}
+
+```
+
+
